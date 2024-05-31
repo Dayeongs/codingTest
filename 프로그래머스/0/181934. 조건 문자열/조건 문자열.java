@@ -1,23 +1,20 @@
 class Solution {
     public int solution(String ineq, String eq, int n, int m) {
-        int answer = 0;
+        boolean answer = false;
         switch (ineq.concat(eq)) {
             case ">!":
-                answer = n > m ? 1 : 0;
+                answer = n > m;
                 break;
             case "<!":
-                answer = n < m ? 1 : 0;
+                answer = n < m;
                 break;
             case ">=":
-                answer = n >= m ? 1 : 0;
+                answer = n >= m;
                 break;
             case "<=":
-                answer = n <= m ? 1 : 0;
-                break;
-            default:
-                System.out.println("잘못된 입력입니다.");
+                answer = n <= m;
                 break;
         }
-        return answer;
+        return answer ? 1 : 0;
     }
 }
