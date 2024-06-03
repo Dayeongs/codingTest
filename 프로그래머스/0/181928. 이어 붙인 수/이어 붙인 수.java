@@ -2,8 +2,7 @@ class Solution {
     public int solution(int[] num_list) {
         String even = "";
         String odd = "";
-        for (int i = 0; i < num_list.length; i++) {
-            int num = num_list[i];
+        for (int num : num_list) {
             if (num%2 == 0) {
                 even += Integer.toString(num);
             } else {
